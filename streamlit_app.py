@@ -27,10 +27,10 @@ fruit_choice = streamlit.text_input('What fruit would you like information about
 streamlit.write('The user entered ', fruit_choice)
 
 
-#10/24
+#1024
 streamlit.header("Fruityvice Fruit Advice!")
-fruit_choice2 = streamlit.text_input('What fruit would you like information about?','Kiwi')
-streamlit.write('The user entered ', fruit_choice2)
+my_fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+streamlit.write('The user entered ', my_fruit_choice)
 
 
 

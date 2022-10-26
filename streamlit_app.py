@@ -5,6 +5,8 @@ my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("use warehouse pc_rivery_wh") 
 
+streamlit.stop()
+
 streamlit.title('My Parents New Healthy Diner')
 
 streamlit.header('Breakfast Favorites')

@@ -32,7 +32,7 @@ streamlit.dataframe(fruityvice_normalized)
 streamlit.header("Fruityvice Fruit Advice3!")
 
 #create the repeatable code block
-def get_fruityvice_data(this_fruit_choice)
+def get_fruityvice_data(this_fruit_choice):
       fruityvice_response2 = requests.get("https://fruityvice.com/api/fruit/"  + fruit_choice2)
       fruityvice_normalized2 = pandas.json_normalize(fruityvice_response2.json())
       return fruityvice_normalized2

@@ -42,6 +42,8 @@ try:
       fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
       streamlit.dataframe(fruityvice_normalized)
 
+except URLError as e:
+    streamlit.error()
 
 # Let's put a pick list here so they can pick the fruit they want to include 
 #fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])

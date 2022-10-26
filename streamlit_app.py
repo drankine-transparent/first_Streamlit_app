@@ -13,13 +13,11 @@ my_cur.execute("use warehouse pc_rivery_wh")
 
 
 streamlit.title('My Parents New Healthy Diner')
-
 streamlit.header('Breakfast Favorites')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
 streamlit.text('🥗 Kale, Spinach & Rocket Smoothie')
 streamlit.text('🐔 Hard-Boiled Free-Range Egg')
 streamlit.text('🥑 Avocado Toast')
-
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
@@ -38,9 +36,9 @@ try:
     if not fruit_choice2:
         streamlit.error('Please select a fruit to get information')
     else:
-      fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"  + fruit_choice2)
-      fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-      streamlit.dataframe(fruityvice_normalized)
+      fruityvice_response2 = requests.get("https://fruityvice.com/api/fruit/"  + fruit_choice2)
+      fruityvice_normalized2 = pandas.json_normalize(fruityvice_response2.json())
+      streamlit.dataframe(fruityvice_normalized2)
 
 except URLError as e:
     streamlit.error()
